@@ -28,6 +28,8 @@ for ln in proc.stdout:
         if xid.strip('0') == '':
             print 'Binary lacks build id'
             exit(1)
+        if xnam.endswith('.nexe'):
+            tname = xnam = 'main.nexe'
         outp = '%s/%s/%s/%s.sym' % (symdir, tname, xid, xnam)
         if os.path.isfile(outp):
             print outp, 'already exists'
