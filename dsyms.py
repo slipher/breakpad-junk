@@ -1,11 +1,11 @@
 #!/usr/bin/python
 
 import sys,os
+execfile(os.path.join(os.path.dirname(__file__), 'dsyms-paths.py'))
+
 if len(sys.argv) != 2:
     print "dsyms <binary>: dump symbols of <binary> to", symdir
     exit(1)
-
-execfile(os.path.join(os.path.dirname(__file__), 'dsyms-paths.py'))
 
 t = sys.argv[-1]
 if not os.path.isfile(t):
