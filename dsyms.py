@@ -1,13 +1,12 @@
-symdir = "xxxxxxxxxxx" 
-dumpsyms_path = "xxxxxxxxxxx"
 #!/usr/bin/python
 
-
-import sys
+import sys,os
 if len(sys.argv) != 2:
     print "dsyms <binary>: dump symbols of <binary> to", symdir
     exit(1)
-import os.path
+
+execfile(os.path.join(os.path.dirname(__file__), 'dsyms-paths.py'))
+
 t = sys.argv[-1]
 if not os.path.isfile(t):
     print "File doesn't exist:", t
