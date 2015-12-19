@@ -1,5 +1,7 @@
 symdir = "xxxxxxxxxxx" 
 dumpsyms_path = "xxxxxxxxxxx"
+#!/usr/bin/python
+
 
 import sys
 if len(sys.argv) != 2:
